@@ -1,26 +1,158 @@
-<<<<<<< HEAD
-* { box-sizing: border-box;}
-body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; line-height: 1.6; }
-.skip-link {position: absolute; left: -9999px;}
-.skip-link:focus {left: 1rem; top: 1rem; background: #fff; padding: .5rem; border: 1px solid #000;}
-header, main, footer { max-width: 960px; margin: 0 auto; padding: 1rem; }
-nav { display: flex; align-items:center; justify-content: space-between; gap: 1rem; }
-nav ul {display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0;}
-#hero { padding: 3rem 0 2rem; }
-section {padding: 1.5rem 0 ; border-top: 1px solid #eee; }
-article {padding: .75rem 0; }
-footer {text-align: center; color: #666; padding: 2rem 0; }
-=======
-* { box-sizing: border-box;}
-body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; line-height: 1.6; }
-.skip-link {position: absolute; left: -9999px;}
-.skip-link:focus {left: 1rem; top: 1rem; background: #fff; padding: .5rem; border: 1px solid #000;}
-header, main, footer { max-width: 960px; margin: 0 auto; padding: 1rem; }
-nav { display: flex; align-items:center; justify-content: space-between; gap: 1rem; }
-nav ul {display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0;}
-#hero { padding: 3rem 0 2rem; }
-section {padding: 1.5rem 0 ; border-top: 1px solid #eee; }
-article {padding: .75rem 0; }
-footer {text-align: center; color: #666; padding: 2rem 0; }
->>>>>>> 2e28063289d40b0f724f8171ca29027916f64835
-@media (max-width: 600px) {nav ul {flex-wrap: wrap;} }
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ===== Skip Link ===== */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  z-index: 100;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.2rem;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+article {
+  padding: 1rem 0;
+}
+
+article h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+article p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== Contact Section ===== */
+#contact p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #hero h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 1.6rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+}
